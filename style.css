@@ -1,15 +1,15 @@
-body {
+body{
   background-image: url("bg.png");
 }
 .container {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   width: 60%;
   height: 100%;
   padding-block-end: 50px;
   border-radius: 5px;
   box-shadow: 2px 2px 6px 6px rgba(0, 0, 0, 0.2);
 }
-.hearder {
+.header{
   background-color: #6d5ad1;
   color: white;
   width: 100%;
@@ -21,117 +21,137 @@ body {
   position: relative;
   text-align: center;
 }
-.input-button {
-  width: 10%;
-  padding: 7px;
-  margin: 1px;
-  border: none;
-  border-radius: 30px;
-  background-color: #6d5ad1;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-family: "Prompt", sans-serif;
-  display: inline;
-  border-radius: 2;
-}
-.input-button:hover {
-  width: 10%;
-  padding: 7px;
-  margin: 1px;
-  border: none;
-  border-radius: 30px;
-  background-color: #947eff;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-family: "Prompt", sans-serif;
-  display: inline;
-  border-radius: 2;
-}
+
 .input {
   margin: 0;
   border: none;
-  border-radius: 5px;
-  width: 70%;
+  border-radius: 5;
+  width:70%;
   padding: 10px;
   float: center;
   font-size: 16px;
   transition: 0.3s;
-  display: inline;
+  padding: 20px;
+  display:inline;
+  height: 80px;
+  box-shadow: 2px 2px 6px 6px rgba(85, 85, 85, 0.2);
+  
+  
+  }
+  
+.tweet-button {
+  padding: 4px;
+  border: none;
+  border-radius: 30px;
+  width: 8%;
+  background-color: #6d5ad1;
+  color: rgb(255, 255, 255);
+  float: center;
+  text-align: center;
+  font-size:18px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Prompt', sans-serif;
+  display: inline; 
+  border-radius: 2;
+  position:absolute;
+  right:440px;
+  
 }
-
+.tweet-button:hover {
+  padding: 4px;
+  border: none;
+  border-radius: 30px;
+  width: 8%;
+  background-color: #947eff;
+  color: rgb(255, 255, 255);
+  float: center;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Prompt', sans-serif;
+  position:absolute;
+  right:440px;
+  /* display: block; */
+  /* border-radius: 0; */
+  
+}
 .post {
-    font-size: 20px;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 5px; 
-    height: 20%;
-    position: relative;
-    padding: 10px;
-    float: center;
-   
-    width: 70%;
-  }
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 5px; 
+  height: 20%;
+  position: relative;
+  padding: 20px;
+  margin-top: 60px;
+  float: center;
+  box-shadow: 2px 2px 6px 6px rgba(85, 85, 85, 0.2);
+  width: 70%;
+}
+.like-button {
+  font-size: 16px;
+  border-radius: 5px;
+  top: 6px;
+  background-color: #DE3163;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border: none;
+  width: 10%;
+  padding: 4px;
+  display: inline;
+  margin-left: 490px;
+  
 
-  .like-button {
-    font-size: 16px;
-    position: absolute;
-    right:75px;
-    border-radius: 5px;
-    top: 6px;
-    background-color: #fdabde;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border: none;
-    width: 10%;
-   
-    padding: 4px;
-  }
-  .like-button:hover {
-    font-size: 16px;
-    position: absolute;
-    right:75px;
-    border-radius: 5px;
-    top: 6px;
-    background-color: #a87093;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border: none;
-    width: 10%;
-   
-    padding: 4px;
-  }
-  .remove-button {
-    font-size: 16px;
-    position: absolute;
-    right: 8px;
-    border-radius: 5px;
-    top: 6px;
-    background-color: #ff9191;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border: none;
-    width: 10%;
-    /* height: 200%; */
-   
-    padding: 4px;
-  }
-  .remove-button:hover {
-    font-size: 16px;
-    position: absolute;
-    right: 8px;
-    border-radius: 5px;
-    top: 6px;
-    background-color: #d37a7a;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border: none;
-    width: 10%;
-    /* height: 200%; */
-   
-    padding: 4px;
-  }
+}
+.like-button:hover {
+  font-size: 16px;
+  border-radius: 5px;
+  top: 6px;
+  background-color: #f881a2;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border: none;
+  width: 10%;
+  padding: 4px;
+  display: inline;
+  margin-left: 490px;
+
+}
+.remove-button {
+  font-size: 16px;
+  
+  right: 8px;
+  border-radius: 5px;
+  top: 6px;
+  background-color: #F73724;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border: none;
+  width: 10%;
+  /* height: 200%; */
+ 
+  padding: 4px;
+}
+.remove-button:hover {
+  font-size: 16px;
+  right: 8px;
+  border-radius: 5px;
+  top: 6px;
+  background-color:#ff6658 ;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border: none;
+  width: 10%;
+  /* height: 200%; */
+ 
+  padding: 4px;
+}
+.fa-trash,.fa-heart{
+  pointer-events: none;
+}
+.completed{
+  text-decoration: line-through;
+  opacity:0.5;
+
+}

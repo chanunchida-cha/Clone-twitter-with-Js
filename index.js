@@ -1,49 +1,61 @@
-const input = document.querySelector('.input')
-const inputButton = document.querySelector('.input-button')
-const content = document.querySelector('.content')
+const input = document.querySelector('.input');
+const tweetButton = document.querySelector('.tweet-button');
+const content = document.querySelector('.content');
 
 
 
+function postcontent(event) {
+ event.preventDefault();
+  //div
+  const post = document.createElement('div');
+  post.classList.add('post');
 
-function postcontent(event){
+ 
+  //Li
+  const newPost = document.createElement('h4');
+  newPost.innerHTML = input.value;
+  newPost.classList.add('todo-item');
+  post.append(newPost)
+  
 
-    event.preventDefault();
+  // button
+  const likeButton = document.createElement('button');
+  likeButton.type = 'button';
+  likeButton.classList.add('like-button');
+  likeButton.innerHTML = '<i class="fas fa-heart"></i>';
+  likeButton.addEventListener('click', countlike);
+  post.append(likeButton)
 
-    const post = document.createElement('div');
-    post.classList.add('post')
-
-
-    const newPost = document.createElement('div');
-    newPost.innerHTML = input.value;
-    newPost.classList.add('new-post')
-    post.append(newPost)
-
-
-    const likeButton = document.createElement('button')
-    likeButton.type = 'button'
-    likeButton.classList.add('like-button')
-    likeButton.innerHTML ='<i class="fas fa-heart"></i>';
-    // likeButton.addEventListener('click',like)
-    post.append(likeButton)
-
-    const removeButton = document.createElement('button')
-    removeButton.type = 'button'
-    removeButton.classList.add('remove-button')
-    removeButton.innerHTML = '<i class="fas fa-trash"></i>'
-    removeButton.addEventListener('click',removeTodo)
-    post.append(removeButton)
+  const buttonremove = document.createElement('button');
+  buttonremove.type = 'button';
+  buttonremove.classList.add('remove-button');
+  buttonremove.innerHTML = '<i class="fas fa-trash"></i>';
+  buttonremove.addEventListener('click', removePost);
+  post.append(buttonremove)
 
 
-    content.prepend(post)
+  //append
+  
+  content.prepend(post);
 
-    input.value="";
+
+  //clear input
+  input.value="";
+}
+
+
+function removePost(event) {
+  event.target.parentNode.remove();
 
 }
 
-function removeTodo(event) {
-    event.target.parentNode.remove();
-  
-  }
-  
 
-inputButton.addEventListener('click', postcontent)
+function countlike(){
+  const count = 0;
+  count++;
+}
+
+
+
+tweetButton.addEventListener('click', postcontent);
+
