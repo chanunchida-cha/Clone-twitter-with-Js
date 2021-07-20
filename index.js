@@ -34,8 +34,6 @@ function postcontent(event) {
     const iconlike = document.createElement('button');
     iconlike.type = 'button'
     countlike.innerHTML = '<i class="fab fa-gratipay"></i>'+count;
-    
-
   });
   post.append(likeButton)
 
@@ -47,7 +45,10 @@ function postcontent(event) {
   buttonremove.type = 'button';
   buttonremove.classList.add('remove-button');
   buttonremove.innerHTML = '<i class="fas fa-trash"></i>';
-  buttonremove.addEventListener('click', removePost);
+  buttonremove.addEventListener('click', (event)=>{
+    event.target.parentNode.remove();
+    
+  });
   post.append(buttonremove)
 
 
@@ -60,11 +61,6 @@ function postcontent(event) {
   input.value="";
 }
 
-
-function removePost(event) {
-  event.target.parentNode.remove();
-
-}
 
 
 
